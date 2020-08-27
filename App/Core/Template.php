@@ -1,9 +1,19 @@
 <?php
 namespace Worktest\Core;
-
+/**
+ * Renderer implementation
+ */
 class Template
 {
-
+/**
+ * Render.
+ * Find the view which controller returned. 
+ * For HomeController and 'index' view will rendered: /Views/home/index.php
+ * @param string $controllerClassName
+ * @param string $viewName
+ * @param array $data
+ * @return string
+ */
     public function render(string $controllerClassName, string $viewName, $data)
     {
         $segments = explode('\\', $controllerClassName);

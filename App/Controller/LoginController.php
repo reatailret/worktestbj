@@ -5,6 +5,12 @@ use Worktest\Model\JobsModel;
 use Worktest\Core\Request;
 
 class LoginController extends BaseController {
+    /**
+     * login page
+     *
+     * @param Request $request
+     * @return array
+     */
     public function index(Request $request)
     {
         if($this->isAdmin())

@@ -1,8 +1,18 @@
 <?php
 namespace Worktest\Core;
-
+/**
+ * Router implementation
+ */
 class Router
 {
+    /**
+     * Get controller name and method from uri string.
+     *  
+     * Name and method searched from GET 'path' param.  ?path=index/home
+     *
+     * @param Request $request
+     * @return array
+     */
     public function resolveControllerAndMethod(Request $request)
     {
         $path = $request->get('path', 'home/index');

@@ -1,6 +1,8 @@
 <?php
 namespace Worktest\Core;
-
+/**
+ * config value object
+ */
 class Config
 {
     public static $mysql_options = [

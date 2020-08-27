@@ -1,10 +1,12 @@
 <?php
 namespace Worktest\Core;
-
+/**
+ * boostrap app
+ */
 class Application
 {
     /**
-     * 
+     * boostrap all in one
      *
      * @param Request $request
      * @return Response

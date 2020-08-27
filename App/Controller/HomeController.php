@@ -5,6 +5,12 @@ use Worktest\Model\JobsModel;
 use Worktest\Core\Request;
 
 class HomeController extends BaseController {
+    /**
+     * default page
+     *
+     * @param Request $request
+     * @return array
+     */
     public function index(Request $request)
     {
         $jobs=new JobsModel();
@@ -25,6 +31,12 @@ class HomeController extends BaseController {
         
         return $this->view();
     }
+    /**
+     * job edit page
+     *
+     * @param Request $request
+     * @return array
+     */
     public function edit(Request $request)
     {
         if(!$this->isAdmin())
@@ -89,6 +101,12 @@ class HomeController extends BaseController {
         return $this->view('edit');
 
     }
+    /**
+     * create job page
+     *
+     * @param Request $request
+     * @return void
+     */
     public function create(Request $request)
     {
         
